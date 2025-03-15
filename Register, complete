@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        
+    Register a New User
+
+    </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <span role="img" aria-label="Home" title="Home">🏠</span>
+        </a> |
+        <a href="/about">
+            <span role="img" aria-label="About" title="About">😂</span>
+        </a> |
+        <a href="/posts/">
+            <span role="img" aria-label="Posts" title="Posts">💕</span>
+        </a> |
+        <a href="/users/register/">
+            <span role="img" aria-label="User Registration" title="User Registration">👥</span>
+        </a> |
+        <a href="/users/login/">
+            <span role="img" aria-label="User Login" title="User login">💻</span>
+        </a> |
+        
+    </nav>
+    <main>
+        
+    <h1>Register a New User</h1>
+    <form class="form-with-validaton" action="/users/register/" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="2hoEododqwNUoW7cKrU2yHiJw19qmnOcCBOOvlAtAzouc3KIgjL9eezgpM61YISo">
+        <div>
+    <label for="id_username">Username:</label>
+
+<div class="helptext" id="id_username_helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</div>
+
+<input type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required aria-describedby="id_username_helptext" id="id_username">
+    
+</div>
+
+  <div>
+    <label for="id_password1">Password:</label>
+
+<div class="helptext" id="id_password1_helptext"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></div>
+
+<input type="password" name="password1" autocomplete="new-password" required aria-describedby="id_password1_helptext" id="id_password1">
+    
+</div>
+
+  <div>
+    <label for="id_password2">Password confirmation:</label>
+
+<div class="helptext" id="id_password2_helptext">Enter the same password as before, for verification.</div>
+
+<input type="password" name="password2" autocomplete="new-password" required aria-describedby="id_password2_helptext" id="id_password2">
+    
+      
+    
+</div>
+        <button class="form-submit">Submit</button>
+    </form>
+
+    </main>
+</body>
+</html>
